@@ -7,7 +7,10 @@ export const getBuildings = async (
 ): Promise<void> => {
   try {
     const buildingNames = doorList.map((door: Door) => door.buildingName);
-    const results = Array.from(new Set(buildingNames));
+    const setResults = Array.from(new Set(buildingNames));
+    const results = setResults.map((item) => ({
+      building: item,
+    }));
     res.json(results);
   } catch (error) {
     res.status(500).json({ message: "Error retrieving data" });

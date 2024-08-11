@@ -14,7 +14,10 @@ const data_1 = require("../data");
 const getBuildings = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const buildingNames = data_1.doorList.map((door) => door.buildingName);
-        const results = Array.from(new Set(buildingNames));
+        const setResults = Array.from(new Set(buildingNames));
+        const results = setResults.map((item) => ({
+            building: item,
+        }));
         res.json(results);
     }
     catch (error) {
