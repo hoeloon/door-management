@@ -11,12 +11,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getBuildings = void 0;
 const data_1 = require("../data");
+const uuid_1 = require("uuid");
 const getBuildings = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const buildingNames = data_1.doorList.map((door) => door.buildingName);
         const setResults = Array.from(new Set(buildingNames));
         const results = setResults.map((item) => ({
             building: item,
+            uuid: (0, uuid_1.v4)(),
         }));
         res.json(results);
     }

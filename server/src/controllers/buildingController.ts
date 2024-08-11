@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { Door, doorList } from "../data";
+import { v4 as uuidv4 } from "uuid";
 
 export const getBuildings = async (
   req: Request,
@@ -10,6 +11,7 @@ export const getBuildings = async (
     const setResults = Array.from(new Set(buildingNames));
     const results = setResults.map((item) => ({
       building: item,
+      uuid: uuidv4(),
     }));
     res.json(results);
   } catch (error) {
