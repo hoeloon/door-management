@@ -11,7 +11,7 @@ import {
 export const doorResults = doorList.map((door: Door) => {
   if (door.apartmentId) {
     const apartment = apartmentList.find(
-      (apartment: Apartment) => apartment.uuid === door.apartmentId
+      (apartment: Apartment) => apartment.apartmentId === door.apartmentId
     );
     return {
       ...door,
@@ -19,7 +19,7 @@ export const doorResults = doorList.map((door: Door) => {
     };
   }
   const building = buildingList.find(
-    (building: Building) => building.uuid === door.buildingId
+    (building: Building) => building.buildingId === door.buildingId
   );
   return {
     ...door,
@@ -42,7 +42,7 @@ export const getDoorById = async (
   try {
     const doorId: string = req.params.id;
     const result: Door | void = doorResults.find(
-      (door: Door) => door.uuid == doorId
+      (door: Door) => door.doorId == doorId
     );
 
     res.json(result);
