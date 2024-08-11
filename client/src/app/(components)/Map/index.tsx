@@ -12,8 +12,8 @@ export const Mapy = ({ selected, buildings }: Props) => {
   const defaultZoom: number = 10;
   const selectedSwitcher = (building: Building) => {
     return selected?.buildingId === building.buildingId
-      ? "red-200"
-      : "blue-200";
+      ? "red-100"
+      : "blue-100";
   };
   return (
     <Mapx
@@ -25,7 +25,12 @@ export const Mapy = ({ selected, buildings }: Props) => {
     >
       {buildings.map((building: Building) => {
         return (
-          <Marker width={50} anchor={building.corrdinates} hover>
+          <Marker
+            width={50}
+            anchor={building.corrdinates}
+            hover
+            key={building.buildingId}
+          >
             <div>
               <MapPin
                 className={`w-9 h-9 fill-${selectedSwitcher(building)}`}
