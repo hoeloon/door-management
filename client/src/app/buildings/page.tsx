@@ -4,32 +4,7 @@ import React from "react";
 import Header from "@/app/(components)/Header";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import { useGetBuildingsQuery } from "@/state/api";
-import Link from "next/link";
-import { Button } from "@mui/material";
-
-const headerCss = "bg-gray-300";
-
-const renderLink = (params: any) => {
-  return (
-    <Link
-      href={`/buildings/${params.row.building
-        .replace(/\s+/g, "")
-        .toLowerCase()}`}
-    >
-      <Button className="bg-gray-100">{params.row.building}</Button>
-    </Link>
-  );
-};
-
-const Buildingcolumns: GridColDef[] = [
-  {
-    field: "building",
-    headerName: "Building",
-    width: 400,
-    headerClassName: headerCss,
-    renderCell: renderLink,
-  },
-];
+import { Buildingcolumns } from "./buildingColums";
 
 const Buildings = () => {
   const { data: buildings, isError, isLoading } = useGetBuildingsQuery();

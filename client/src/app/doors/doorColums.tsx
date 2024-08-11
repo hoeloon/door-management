@@ -1,6 +1,7 @@
 import { Button } from "@mui/material";
 import { GridColDef } from "@mui/x-data-grid";
 import Link from "next/link";
+import { renderBuildingLink } from "../buildings/buildingColums";
 
 const headerCss = "bg-gray-300";
 
@@ -24,6 +25,7 @@ export const doorColumns: GridColDef[] = [
     headerName: "Building",
     width: 250,
     headerClassName: headerCss,
+    renderCell: renderBuildingLink,
   },
   {
     field: "connectionType",
