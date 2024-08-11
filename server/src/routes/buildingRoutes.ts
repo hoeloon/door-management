@@ -1,12 +1,12 @@
 import { Router } from "express";
 import {
   getBuildings,
-  getBuildingByName,
+  getBuildingById,
 } from "../controllers/buildingController";
 
 const router = Router();
 
 router.get("/", getBuildings);
-router.get("/:buildingName", getBuildingByName);
+router.get("/:id", getBuildingById);
 
 export default router;

@@ -9,18 +9,19 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getDoorById = exports.getDoors = void 0;
+exports.getDoorById = exports.getDoors = exports.doorResults = void 0;
 const data_1 = require("../data");
+exports.doorResults = data_1.doorList.map((door) => {
+    if (door.apartmentId) {
+        const apartment = data_1.apartmentList.find((apartment) => apartment.uuid === door.apartmentId);
+        return Object.assign(Object.assign({}, door), { apartmentName: apartment ? apartment.apartmentName : null });
+    }
+    const building = data_1.buildingList.find((building) => building.uuid === door.buildingId);
+    return Object.assign(Object.assign({}, door), { buildingName: building === null || building === void 0 ? void 0 : building.buildingName });
+});
 const getDoors = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const results = data_1.doorList.map((door) => {
-            if (door.apartmentId) {
-                const apartment = data_1.apartmentList.find((apartment) => apartment.uuid === door.apartmentId);
-                return Object.assign(Object.assign({}, door), { apartmentName: apartment ? apartment.apartmentName : null });
-            }
-            return door;
-        });
-        res.json(results);
+        res.json(exports.doorResults);
     }
     catch (error) {
         res.status(500).json({ message: "Error retrieving data" });
@@ -30,7 +31,7 @@ exports.getDoors = getDoors;
 const getDoorById = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const doorId = req.params.id;
-        const result = data_1.doorList.find((door) => door.uuid == doorId);
+        const result = exports.doorResults.find((door) => door.uuid == doorId);
         res.json(result);
     }
     catch (error) {
