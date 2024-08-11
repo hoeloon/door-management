@@ -10,7 +10,7 @@ export const renderBuildingLink = (params: any) => {
         .replace(/\s+/g, "")
         .toLowerCase()}`}
     >
-      <Button className="bg-gray-100">{params.row.building}</Button>
+      <Button className="bg-gray-100">{params.row.buildingName}</Button>
     </Link>
   );
 };
