@@ -344,47 +344,58 @@ export const doorList: Door[] = [
 export type Building = {
   buildingId: string;
   buildingName: string;
+  corrdinates: number[];
 };
 export const buildingList: Building[] = [
   {
     buildingId: "d79713c8-e10d-445d-8142-29510a02f6cd",
     buildingName: "238 Orchard Blvd",
+    corrdinates: [1.3039, 103.8357],
   },
   {
     buildingId: "8ef08401-20a2-4bfe-bd64-3f51afee07fd",
     buildingName: "19 Oxley Rd",
+    corrdinates: [1.3058, 103.8377],
   },
   {
     buildingId: "0ed1b0d0-7642-46c3-bcb6-aaafcbb28b16",
     buildingName: "19B Mount Sinai Rise",
+    corrdinates: [1.3158, 103.7817],
   },
   {
     buildingId: "1c4cc96a-547d-406c-be13-e23d804a49b0",
     buildingName: "96 Dawson Rd",
+    corrdinates: [1.2946, 103.8093],
   },
   {
     buildingId: "148bc856-7f5c-4951-9a7e-162e9d3ac15e",
     buildingName: "22 Orange Grove R",
+    corrdinates: [1.3106, 103.8288],
   },
   {
     buildingId: "a39b0068-68a8-4ba2-854f-107ad95db2b3",
     buildingName: "180 Kitchener Rd",
+    corrdinates: [1.3112, 103.8565],
   },
   {
     buildingId: "f03d86ec-6265-4320-b402-776792582f9a",
     buildingName: "500 Jln Sultan",
+    corrdinates: [1.3014, 103.8618],
   },
   {
     buildingId: "2abe5291-49af-48c8-b052-39d788da2d70",
     buildingName: "13 Tanjong Katong Rd",
+    corrdinates: [1.3019, 103.8978],
   },
   {
     buildingId: "7b8abf09-77a8-44f2-a2c6-6bbf48404f10",
     buildingName: "2 Leonie Hill Rd",
+    corrdinates: [1.301, 103.8315],
   },
   {
     buildingId: "f29060b0-5bc4-431b-93f9-cda370305caf",
     buildingName: "67 W Coast Wy",
+    corrdinates: [1.315, 103.7646],
   },
 ];
 
