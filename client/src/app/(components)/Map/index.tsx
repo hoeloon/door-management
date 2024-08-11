@@ -33,9 +33,19 @@ export const Mapy = ({ selected, buildings }: Props) => {
           >
             <div>
               <MapPin
-                className={`w-9 h-9 fill-${selectedSwitcher(building)}`}
+                className={`w-9 h-9 ${
+                  selected?.buildingId === building.buildingId
+                    ? "fill-red-100"
+                    : "fill-blue-100"
+                }`}
               />
-              <div className={`p-1 bg-${selectedSwitcher(building)}`}>
+              <div
+                className={`p-1 ${
+                  selected?.buildingId === building.buildingId
+                    ? "bg-red-100"
+                    : "bg-blue-100"
+                }`}
+              >
                 {building.buildingName}
               </div>
             </div>
