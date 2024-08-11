@@ -10,6 +10,7 @@ const cors_1 = __importDefault(require("cors"));
 const helmet_1 = __importDefault(require("helmet"));
 const morgan_1 = __importDefault(require("morgan"));
 const doorRoutes_1 = __importDefault(require("./routes/doorRoutes"));
+const buildingRoutes_1 = __importDefault(require("./routes/buildingRoutes"));
 // ROUTE IMPORT
 // CONFIGURATION
 dotenv_1.default.config();
@@ -22,7 +23,8 @@ app.use(body_parser_1.default.json());
 app.use(body_parser_1.default.urlencoded({ extended: false }));
 app.use((0, cors_1.default)());
 // ROUTES
-app.use("/doors", doorRoutes_1.default); // http://localhost:8000/door
+app.use("/doors", doorRoutes_1.default); // http://localhost:8000/doors
+app.use("/buildings", buildingRoutes_1.default); // http://localhost:8000/buildings
 // SERVER
 const port = process.env.PORT || 3001;
 app.listen(port, () => {

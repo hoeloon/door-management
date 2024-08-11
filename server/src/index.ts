@@ -5,6 +5,7 @@ import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 import doorRoutes from "./routes/doorRoutes";
+import buildingRoutes from "./routes/buildingRoutes";
 // ROUTE IMPORT
 
 // CONFIGURATION
@@ -19,7 +20,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
 // ROUTES
-app.use("/doors", doorRoutes); // http://localhost:8000/door
+app.use("/doors", doorRoutes); // http://localhost:8000/doors
+app.use("/buildings", buildingRoutes); // http://localhost:8000/buildings
 
 // SERVER
 const port = process.env.PORT || 3001;

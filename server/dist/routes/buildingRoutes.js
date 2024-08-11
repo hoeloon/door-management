@@ -1,8 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
-const doorController_1 = require("../controllers/doorController");
+const buildingController_1 = require("../controllers/buildingController");
 const router = (0, express_1.Router)();
-router.get("/", doorController_1.getDoors);
-router.get("/:id", doorController_1.getDoorById);
+router.get("/", buildingController_1.getBuildings);
 exports.default = router;
