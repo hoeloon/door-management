@@ -17,7 +17,7 @@ const Doors = () => {
       <DataGrid
         rows={doors}
         columns={doorColumns}
-        getRowId={(row) => row.uuid}
+        getRowId={(row) => row.doorId}
         className="bg-gray-100 shadow rounded-lg border border-gray-200 mt-5 !text-gray-700"
       />
     </div>

@@ -7,7 +7,7 @@ const headerCss = "bg-gray-300";
 
 const renderActionButton = (params: any) => {
   return (
-    <Link href={`/doors/${params.row.uuid}`}>
+    <Link href={`/doors/${params.row.doorId}`}>
       <Button className="bg-gray-100">Details</Button>
     </Link>
   );
@@ -52,7 +52,7 @@ export const doorColumns: GridColDef[] = [
     headerClassName: headerCss,
   },
   {
-    field: "uuid",
+    field: "doorId",
     headerName: "Action",
     width: 100,
     headerClassName: headerCss,

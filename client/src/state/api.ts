@@ -1,17 +1,20 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { Point } from "pigeon-maps";
 
 export interface Door {
   doorName: string;
   buildingName: string;
+  buildingId: string;
   connectionType: string;
   connectionStatus: string;
   lastUpdate: string;
   apartmentName: string;
-  uuid: string;
+  doorId: string;
 }
 export interface Building {
-  doorName: string;
-  uuid: string;
+  buildingName: string;
+  buildingId: string;
+  corrdinates: Point;
 }
 
 export const api = createApi({
@@ -38,8 +41,8 @@ export const api = createApi({
       providesTags: ["Buildings"],
     }),
     getBuildingsByName: build.query<Door[], string>({
-      query: (buildingName) => ({
-        url: `/buildings/${buildingName}`,
+      query: (buildingId) => ({
+        url: `/buildings/${buildingId}`,
       }),
       providesTags: ["Buildings"],
     }),

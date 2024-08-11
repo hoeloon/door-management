@@ -9,21 +9,23 @@ import {
 } from "../data";
 
 export const doorResults = doorList.map((door: Door) => {
-  if (door.apartmentId) {
-    const apartment = apartmentList.find(
-      (apartment: Apartment) => apartment.apartmentId === door.apartmentId
-    );
-    return {
-      ...door,
-      apartmentName: apartment ? apartment.apartmentName : null,
-    };
-  }
   const building = buildingList.find(
     (building: Building) => building.buildingId === door.buildingId
+  );
+
+  if (!door.apartmentId) {
+    return {
+      ...door,
+      buildingName: building?.buildingName,
+    };
+  }
+  const apartment = apartmentList.find(
+    (apartment: Apartment) => apartment.apartmentId === door.apartmentId
   );
   return {
     ...door,
     buildingName: building?.buildingName,
+    apartmentName: apartment ? apartment.apartmentName : null,
   };
 });
 

@@ -12,12 +12,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.getDoorById = exports.getDoors = exports.doorResults = void 0;
 const data_1 = require("../data");
 exports.doorResults = data_1.doorList.map((door) => {
-    if (door.apartmentId) {
-        const apartment = data_1.apartmentList.find((apartment) => apartment.apartmentId === door.apartmentId);
-        return Object.assign(Object.assign({}, door), { apartmentName: apartment ? apartment.apartmentName : null });
-    }
     const building = data_1.buildingList.find((building) => building.buildingId === door.buildingId);
-    return Object.assign(Object.assign({}, door), { buildingName: building === null || building === void 0 ? void 0 : building.buildingName });
+    if (!door.apartmentId) {
+        return Object.assign(Object.assign({}, door), { buildingName: building === null || building === void 0 ? void 0 : building.buildingName });
+    }
+    const apartment = data_1.apartmentList.find((apartment) => apartment.apartmentId === door.apartmentId);
+    return Object.assign(Object.assign({}, door), { buildingName: building === null || building === void 0 ? void 0 : building.buildingName, apartmentName: apartment ? apartment.apartmentName : null });
 });
 const getDoors = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
