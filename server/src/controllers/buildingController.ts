@@ -18,3 +18,24 @@ export const getBuildings = async (
     res.status(500).json({ message: "Error retrieving data" });
   }
 };
+
+export const getBuildingByName = async (
+  req: Request,
+  res: Response
+): Promise<void> => {
+  try {
+    const buildingName: string = req.params.buildingName;
+    const normalizedQuery = buildingName.replace(/\s+/g, "").toLowerCase();
+    console.log("normalizedQuery", normalizedQuery);
+    const results = doorList.filter((door) => {
+      const normalizedBuildingName = door.buildingName
+        .replace(/\s+/g, "")
+        .toLowerCase();
+      console.log(normalizedBuildingName, "vs", normalizedQuery);
+      return normalizedBuildingName === normalizedQuery;
+    });
+    res.json(results);
+  } catch (error) {
+    res.status(500).json({ message: "Error retrieving data" });
+  }
+};

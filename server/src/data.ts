@@ -109,7 +109,7 @@ export const doorList: Door[] = [
   {
     uuid: "c000bf11-5a3c-4f41-9e6a-a5f6132458e9",
     doorName: "Garage",
-    buildingName: "19B Mount Sinai Rise, Singapore 276921",
+    buildingName: "19B Mount Sinai Rise",
     connectionType: "Wired",
     connectionStatus: "Online",
     lastUpdate: "2024-08-08T09:20:00Z",
@@ -118,7 +118,7 @@ export const doorList: Door[] = [
   {
     uuid: "3704f924-5fa4-44bc-b9d7-ffba16c3a32c",
     doorName: "Gym",
-    buildingName: "19B Mount Sinai Rise, Singapore 276921",
+    buildingName: "19B Mount Sinai Rise",
     connectionType: "Wireless",
     connectionStatus: "Offline",
     lastUpdate: "2024-08-08T09:15:00Z",
@@ -163,7 +163,7 @@ export const doorList: Door[] = [
   {
     uuid: "b4a829fe-ffcf-49b2-b7e9-6d5580778cb0",
     doorName: "Side Gate C",
-    buildingName: "22 Orange Grove Rd, Singapore 258350",
+    buildingName: "22 Orange Grove Rd",
     connectionType: "Wired",
     connectionStatus: "Online",
     lastUpdate: "2024-08-08T08:50:00Z",
@@ -172,7 +172,7 @@ export const doorList: Door[] = [
   {
     uuid: "ff6f81ee-a184-450b-a4fe-d6953b93a8b2",
     doorName: "Side Gate D",
-    buildingName: "22 Orange Grove Rd, Singapore 258350",
+    buildingName: "22 Orange Grove Rd",
     connectionType: "Wireless",
     connectionStatus: "Online",
     lastUpdate: "2024-08-08T08:45:00Z",
@@ -181,7 +181,7 @@ export const doorList: Door[] = [
   {
     uuid: "c721b406-3550-4099-81cd-8ab8e368825d",
     doorName: "Main Gate",
-    buildingName: "22 Orange Grove Rd, Singapore 258350",
+    buildingName: "22 Orange Grove Rd",
     connectionType: "Wired",
     connectionStatus: "Offline",
     lastUpdate: "2024-08-08T08:40:00Z",
@@ -190,7 +190,7 @@ export const doorList: Door[] = [
   {
     uuid: "c3ee23a3-7f17-4bf1-8aa1-5ece837ab675",
     doorName: "Roof Access",
-    buildingName: "22 Orange Grove Rd, Singapore 258350",
+    buildingName: "22 Orange Grove Rd",
     connectionType: "Wireless",
     connectionStatus: "Online",
     lastUpdate: "2024-08-08T08:35:00Z",
@@ -199,7 +199,7 @@ export const doorList: Door[] = [
   {
     uuid: "a474bda9-f755-4eb8-a8b0-610d3ec50884",
     doorName: "Garage",
-    buildingName: "180 Kitchener Rd, Singapore 208539",
+    buildingName: "180 Kitchener Rd",
     connectionType: "Wired",
     connectionStatus: "Online",
     lastUpdate: "2024-08-08T08:30:00Z",
@@ -208,7 +208,7 @@ export const doorList: Door[] = [
   {
     uuid: "f2ff3cd0-38e4-4110-9310-c1ec28da2d60",
     doorName: "Gym",
-    buildingName: "180 Kitchener Rd, Singapore 208539",
+    buildingName: "180 Kitchener Rd",
     connectionType: "Wireless",
     connectionStatus: "Offline",
     lastUpdate: "2024-08-08T08:25:00Z",
@@ -217,7 +217,7 @@ export const doorList: Door[] = [
   {
     uuid: "3e0ed7b2-b41f-4b2d-82e1-4a9822429d4c",
     doorName: "B1 Ramp",
-    buildingName: "500 Jln Sultan, Singapore 199020",
+    buildingName: "500 Jln Sultan",
     connectionType: "Wired",
     connectionStatus: "Online",
     lastUpdate: "2024-08-08T08:20:00Z",
@@ -226,7 +226,7 @@ export const doorList: Door[] = [
   {
     uuid: "a0066764-0b32-4721-ad29-1f860fd0bc43",
     doorName: "B1 Staircase",
-    buildingName: "500 Jln Sultan, Singapore 199020",
+    buildingName: "500 Jln Sultan",
     connectionType: "Wireless",
     connectionStatus: "Offline",
     lastUpdate: "2024-08-08T08:15:00Z",
@@ -235,7 +235,7 @@ export const doorList: Door[] = [
   {
     uuid: "61322e7e-890a-4b5c-8eb2-fb4ee8da297b",
     doorName: "Side Gate A",
-    buildingName: "500 Jln Sultan, Singapore 199020",
+    buildingName: "500 Jln Sultan",
     connectionType: "Wired",
     connectionStatus: "Online",
     lastUpdate: "2024-08-08T08:10:00Z",
@@ -244,7 +244,7 @@ export const doorList: Door[] = [
   {
     uuid: "77e8be25-071e-4b01-b32b-cc61711353e6",
     doorName: "Side Gate B",
-    buildingName: "500 Jln Sultan, Singapore 199020",
+    buildingName: "500 Jln Sultan",
     connectionType: "Wireless",
     connectionStatus: "Offline",
     lastUpdate: "2024-08-08T08:05:00Z",
@@ -253,7 +253,7 @@ export const doorList: Door[] = [
   {
     uuid: "b43e78c1-e5e8-48b0-a536-5ff5e1259be8",
     doorName: "Side Gate C",
-    buildingName: "13 Tanjong Katong Rd, Singapore 437158",
+    buildingName: "13 Tanjong Katong Rd",
     connectionType: "Wired",
     connectionStatus: "Online",
     lastUpdate: "2024-08-08T08:00:00Z",
@@ -262,7 +262,7 @@ export const doorList: Door[] = [
   {
     uuid: "89a954bd-7550-4a8d-be18-1d4cb0dd180b",
     doorName: "Side Gate D",
-    buildingName: "13 Tanjong Katong Rd, Singapore 437158",
+    buildingName: "13 Tanjong Katong Rd",
     connectionType: "Wireless",
     connectionStatus: "Online",
     lastUpdate: "2024-08-08T07:55:00Z",
@@ -271,7 +271,7 @@ export const doorList: Door[] = [
   {
     uuid: "59b9cbd9-2931-4d31-8f5c-1b3302e003f5",
     doorName: "Main Gate",
-    buildingName: "13 Tanjong Katong Rd, Singapore 437158",
+    buildingName: "13 Tanjong Katong Rd",
     connectionType: "Wired",
     connectionStatus: "Offline",
     lastUpdate: "2024-08-08T07:50:00Z",
@@ -280,7 +280,7 @@ export const doorList: Door[] = [
   {
     uuid: "a772e248-b512-48c8-b188-3e44ae1eeddc",
     doorName: "Roof Access",
-    buildingName: "13 Tanjong Katong Rd, Singapore 437158",
+    buildingName: "13 Tanjong Katong Rd",
     connectionType: "Wireless",
     connectionStatus: "Online",
     lastUpdate: "2024-08-08T07:45:00Z",
@@ -289,7 +289,7 @@ export const doorList: Door[] = [
   {
     uuid: "6f283677-c98b-4306-9940-dad0c3d3f917",
     doorName: "Main Entrance",
-    buildingName: "2 Leonie Hill Rd, Singapore 239192",
+    buildingName: "2 Leonie Hill Rd",
     connectionType: "Wired",
     connectionStatus: "Online",
     lastUpdate: "2024-08-08T07:40:00Z",
@@ -298,7 +298,7 @@ export const doorList: Door[] = [
   {
     uuid: "09c9dfde-3a79-408d-973f-d020ab72d574",
     doorName: "Main Entrance",
-    buildingName: "2 Leonie Hill Rd, Singapore 239192",
+    buildingName: "2 Leonie Hill Rd",
     connectionType: "Wireless",
     connectionStatus: "Offline",
     lastUpdate: "2024-08-08T07:35:00Z",
@@ -307,7 +307,7 @@ export const doorList: Door[] = [
   {
     uuid: "6b7049f6-4e40-4d1b-a5c0-cef89a90d5fb",
     doorName: "Unit Entrance",
-    buildingName: "67 W Coast Wy, Singapore 127023",
+    buildingName: "67 W Coast Wy",
     connectionType: "Wireless",
     connectionStatus: "Offline",
     lastUpdate: "2024-08-08T07:35:00Z",
@@ -316,7 +316,7 @@ export const doorList: Door[] = [
   {
     uuid: "6366f15a-6b06-406b-9746-5d250ed86e94",
     doorName: "Unit Entrance",
-    buildingName: "67 W Coast Wy, Singapore 127023",
+    buildingName: "67 W Coast Wy",
     connectionType: "Wireless",
     connectionStatus: "Online",
     lastUpdate: "2024-08-08T11:23:00Z",
@@ -325,7 +325,7 @@ export const doorList: Door[] = [
   {
     uuid: "4040a517-cc06-4301-9d71-53747591bb3e",
     doorName: "Unit Entrance",
-    buildingName: "67 W Coast Wy, Singapore 127023",
+    buildingName: "67 W Coast Wy",
     connectionType: "Wireless",
     connectionStatus: "Online",
     lastUpdate: "2024-08-08T13:15:00Z",
@@ -334,7 +334,7 @@ export const doorList: Door[] = [
   {
     uuid: "98520753-4a8e-4b21-a34c-cca084dd94b9",
     doorName: "Unit Entrance",
-    buildingName: "67 W Coast Wy, Singapore 127023",
+    buildingName: "67 W Coast Wy",
     connectionType: "Wireless",
     connectionStatus: "Online",
     lastUpdate: "2024-08-08T16:53:00Z",

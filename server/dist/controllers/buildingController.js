@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getBuildings = void 0;
+exports.getBuildingByName = exports.getBuildings = void 0;
 const data_1 = require("../data");
 const uuid_1 = require("uuid");
 const getBuildings = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
@@ -27,3 +27,22 @@ const getBuildings = (req, res) => __awaiter(void 0, void 0, void 0, function* (
     }
 });
 exports.getBuildings = getBuildings;
+const getBuildingByName = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const buildingName = req.params.buildingName;
+        const normalizedQuery = buildingName.replace(/\s+/g, "").toLowerCase();
+        console.log("normalizedQuery", normalizedQuery);
+        const results = data_1.doorList.filter((door) => {
+            const normalizedBuildingName = door.buildingName
+                .replace(/\s+/g, "")
+                .toLowerCase();
+            console.log(normalizedBuildingName, "vs", normalizedQuery);
+            return normalizedBuildingName === normalizedQuery;
+        });
+        res.json(results);
+    }
+    catch (error) {
+        res.status(500).json({ message: "Error retrieving data" });
+    }
+});
+exports.getBuildingByName = getBuildingByName;
