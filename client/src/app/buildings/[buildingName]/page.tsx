@@ -4,7 +4,7 @@ import Header from "@/app/(components)/Header";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import { useGetBuildingsByNameQuery } from "@/state/api";
 import React from "react";
-import { doorColumns } from "@/app/doors/page";
+import { doorColumns } from "@/app/doors/doorColums";
 
 type Props = {
   buildingName: string;
