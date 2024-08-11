@@ -10,11 +10,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getDoors = void 0;
+const data_1 = require("./data");
 // const prisma = new PrismaClient();
 const getDoors = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        // const users = await prisma.users.findMany();
-        res.json({ hello: "world" });
+        res.json({ doorList: data_1.doorData });
     }
     catch (error) {
         res.status(500).json({ message: "Error retrieving data" });
