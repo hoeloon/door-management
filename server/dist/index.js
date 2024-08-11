@@ -22,7 +22,7 @@ app.use(body_parser_1.default.json());
 app.use(body_parser_1.default.urlencoded({ extended: false }));
 app.use((0, cors_1.default)());
 // ROUTES
-app.use("/door", doorRoutes_1.default); // http://localhost:8000/door
+app.use("/doors", doorRoutes_1.default); // http://localhost:8000/door
 // SERVER
 const port = process.env.PORT || 3001;
 app.listen(port, () => {

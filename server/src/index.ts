@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
 // ROUTES
-app.use("/door", doorRoutes); // http://localhost:8000/door
+app.use("/doors", doorRoutes); // http://localhost:8000/door
 
 // SERVER
 const port = process.env.PORT || 3001;
