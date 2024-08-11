@@ -14,7 +14,7 @@ const data_1 = require("./data");
 // const prisma = new PrismaClient();
 const getDoors = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        res.json({ doorList: data_1.doorData });
+        res.json(data_1.doorData);
     }
     catch (error) {
         res.status(500).json({ message: "Error retrieving data" });

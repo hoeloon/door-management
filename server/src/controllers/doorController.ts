@@ -6,7 +6,7 @@ import { doorData } from "./data";
 
 export const getDoors = async (req: Request, res: Response): Promise<void> => {
   try {
-    res.json({ doorList: doorData });
+    res.json(doorData);
   } catch (error) {
     res.status(500).json({ message: "Error retrieving data" });
   }
