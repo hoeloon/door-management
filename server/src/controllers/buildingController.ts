@@ -10,7 +10,7 @@ export const getBuildings = async (
     const buildingNames = doorList.map((door: Door) => door.buildingName);
     const setResults = Array.from(new Set(buildingNames));
     const results = setResults.map((item) => ({
-      building: item,
+      buildingName: item,
       uuid: uuidv4(),
     }));
     res.json(results);

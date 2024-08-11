@@ -17,7 +17,7 @@ const getBuildings = (req, res) => __awaiter(void 0, void 0, void 0, function* (
         const buildingNames = data_1.doorList.map((door) => door.buildingName);
         const setResults = Array.from(new Set(buildingNames));
         const results = setResults.map((item) => ({
-            building: item,
+            buildingName: item,
             uuid: (0, uuid_1.v4)(),
         }));
         res.json(results);
