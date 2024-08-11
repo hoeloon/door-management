@@ -18,7 +18,7 @@ const DoorDetail = ({ params }: { params: Props }) => {
   }
   return (
     <div className="flex flex-col">
-      <span>{doorDetail?.uuid}</span>
+      <span>{doorDetail?.doorId}</span>
       <span>{doorDetail?.buildingName}</span>
       <span>{doorDetail?.connectionType}</span>
       <span>{doorDetail?.connectionStatus}</span>
