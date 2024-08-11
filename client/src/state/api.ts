@@ -11,6 +11,7 @@ export interface Door {
 }
 export interface Building {
   doorName: string;
+  uuid: string;
 }
 
 export const api = createApi({
@@ -30,14 +31,24 @@ export const api = createApi({
       }),
       providesTags: ["Doors"],
     }),
-    getBuildings: build.query<Door[], string | void>({
+    getBuildings: build.query<Building[], string | void>({
       query: () => ({
         url: "/buildings",
+      }),
+      providesTags: ["Buildings"],
+    }),
+    getBuildingsByName: build.query<Door[], string>({
+      query: (buildingName) => ({
+        url: `/buildings/${buildingName}`,
       }),
       providesTags: ["Buildings"],
     }),
   }),
 });
 
-export const { useGetDoorsQuery, useGetDoorDetailQuery, useGetBuildingsQuery } =
-  api;
+export const {
+  useGetDoorsQuery,
+  useGetDoorDetailQuery,
+  useGetBuildingsQuery,
+  useGetBuildingsByNameQuery,
+} = api;

@@ -17,7 +17,7 @@ const renderActionButton = (params: any) => {
   );
 };
 
-const columns: GridColDef[] = [
+export const doorColumns: GridColDef[] = [
   {
     field: "doorName",
     headerName: "Name",
@@ -73,7 +73,7 @@ const Doors = () => {
       <Header name="Doors" />
       <DataGrid
         rows={doors}
-        columns={columns}
+        columns={doorColumns}
         getRowId={(row) => row.uuid}
         className="bg-gray-100 shadow rounded-lg border border-gray-200 mt-5 !text-gray-700"
       />

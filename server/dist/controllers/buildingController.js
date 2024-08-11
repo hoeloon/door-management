@@ -39,7 +39,14 @@ const getBuildingByName = (req, res) => __awaiter(void 0, void 0, void 0, functi
             console.log(normalizedBuildingName, "vs", normalizedQuery);
             return normalizedBuildingName === normalizedQuery;
         });
-        res.json(results);
+        const resultsWithApartmentName = results.map((door) => {
+            if (door.apartmentId) {
+                const apartment = data_1.apartmentList.find((apartment) => apartment.uuid === door.apartmentId);
+                return Object.assign(Object.assign({}, door), { apartmentName: apartment ? apartment.apartmentName : null });
+            }
+            return door;
+        });
+        res.json(resultsWithApartmentName);
     }
     catch (error) {
         res.status(500).json({ message: "Error retrieving data" });

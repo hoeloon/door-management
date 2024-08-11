@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { Door, doorList } from "../data";
+import { Apartment, apartmentList, Door, doorList } from "../data";
 import { v4 as uuidv4 } from "uuid";
 
 export const getBuildings = async (
@@ -34,7 +34,19 @@ export const getBuildingByName = async (
       console.log(normalizedBuildingName, "vs", normalizedQuery);
       return normalizedBuildingName === normalizedQuery;
     });
-    res.json(results);
+    const resultsWithApartmentName = results.map((door: Door) => {
+      if (door.apartmentId) {
+        const apartment = apartmentList.find(
+          (apartment: Apartment) => apartment.uuid === door.apartmentId
+        );
+        return {
+          ...door,
+          apartmentName: apartment ? apartment.apartmentName : null,
+        };
+      }
+      return door;
+    });
+    res.json(resultsWithApartmentName);
   } catch (error) {
     res.status(500).json({ message: "Error retrieving data" });
   }
