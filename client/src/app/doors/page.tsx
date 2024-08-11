@@ -4,20 +4,30 @@ import React from "react";
 import Header from "@/app/(components)/Header";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import { useGetDoorsQuery } from "@/state/api";
+import { Button } from "@mui/material";
+import Link from "next/link";
 
 const headerCss = "bg-gray-300";
+
+const renderActionButton = (params: any) => {
+  return (
+    <Link href={`/doors/${params.row.uuid}`}>
+      <Button className="bg-gray-100">Details</Button>
+    </Link>
+  );
+};
 
 const columns: GridColDef[] = [
   {
     field: "doorName",
     headerName: "Name",
-    width: 90,
+    width: 150,
     headerClassName: headerCss,
   },
   {
     field: "buildingName",
     headerName: "Building",
-    width: 200,
+    width: 250,
     headerClassName: headerCss,
   },
   {
@@ -46,9 +56,10 @@ const columns: GridColDef[] = [
   },
   {
     field: "uuid",
-    headerName: "ID",
-    width: 300,
+    headerName: "Action",
+    width: 100,
     headerClassName: headerCss,
+    renderCell: renderActionButton,
   },
 ];
 

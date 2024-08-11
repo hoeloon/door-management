@@ -7,21 +7,37 @@ export interface Door {
   connectionStatus: string;
   lastUpdate: string;
   apartmentName: string;
+  uuid: string;
+}
+export interface Building {
+  doorName: string;
 }
 
 export const api = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: process.env.NEXT_PUBLIC_API_BASE_URL }),
   reducerPath: "api",
-  tagTypes: ["Doors"],
+  tagTypes: ["Doors", "Buildings"],
   endpoints: (build) => ({
     getDoors: build.query<Door[], string | void>({
-      query: (search) => ({
+      query: () => ({
         url: "/doors",
-        params: search ? { search } : {},
       }),
       providesTags: ["Doors"],
+    }),
+    getDoorDetail: build.query<Door, string>({
+      query: (id) => ({
+        url: `/doors/${id}`,
+      }),
+      providesTags: ["Doors"],
+    }),
+    getBuildings: build.query<Door[], string | void>({
+      query: () => ({
+        url: "/buildings",
+      }),
+      providesTags: ["Buildings"],
     }),
   }),
 });
 
-export const { useGetDoorsQuery } = api;
+export const { useGetDoorsQuery, useGetDoorDetailQuery, useGetBuildingsQuery } =
+  api;
