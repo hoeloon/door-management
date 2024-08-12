@@ -25,7 +25,7 @@ const Buildings = () => {
     <div className="flex flex-col">
       <Header name="Buildings" />
       <div className=" flex flex-col gap-5 md:flex-row h-auto items-center">
-        <div>
+        <div className="w-fit md:w-auto">
           <DataGrid
             rows={buildings}
             columns={Buildingcolumns}

@@ -18,7 +18,7 @@ export const Buildingcolumns: GridColDef[] = [
   {
     field: "buildingName",
     headerName: "Building",
-    width: 200,
+    width: 300,
     headerClassName: headerCss,
     renderCell: renderBuildingLink,
   },

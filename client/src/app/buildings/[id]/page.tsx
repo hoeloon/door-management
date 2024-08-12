@@ -30,8 +30,8 @@ const BuildingsByName = ({ params }: { params: Props }) => {
         <>
           {" "}
           <div className="flex flex-col">
-            <div className="flex flex-col gap-5 items-center pt-10 md:flex-row">
-              <div className="bg-gray-200 p-10 rounded-3xl text-center">
+            <div className="flex flex-col gap-5  items-center pt-10 md:flex-row">
+              <div className="bg-gray-200 p-10 rounded-3xl text-center ">
                 <div className="font-semibold text-lg">Connection Status</div>
                 <PieChartRe
                   doors={doors}
