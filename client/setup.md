@@ -24,6 +24,9 @@ Creating a new Next.js app in C:\Users\leeho\Documents\project\inventory-managem
 - uuid : generate a random ID
 - axios : make API call
 - dotenv: env variable
+- Clipboard: https://flowbite-react.com/docs/components/clipboard
+- map: https://pigeon-maps.js.org/
+- format daytime: dayjs
 ```
 npm i @mui/x-data-grid @mui/material @emotion/react @emotion/styled lucide-react numeral recharts uuid axios dotenv
 ```

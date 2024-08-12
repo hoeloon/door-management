@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Building } from "@/state/api";
 import { MapPin } from "lucide-react";
 
-type Props = { selected: Building | void; buildings: Building[] };
+type Props = { selected: Building | void; buildings: Building[] | [] };
 
 const singaporeMapCenter: Point = [1.356913, 103.8164];
 

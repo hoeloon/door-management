@@ -10,6 +10,7 @@ export interface Door {
   lastUpdate: string;
   apartmentName: string;
   doorId: string;
+  corrdinates: Point;
 }
 export interface Building {
   buildingName: string;

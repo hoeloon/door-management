@@ -24,17 +24,19 @@ const Buildings = () => {
   return (
     <div className="flex flex-col">
       <Header name="Buildings" />
-      <div className="flex  items-center gap-5">
-        <div style={{ width: "50%" }}>
+      <div className=" flex flex-col gap-5 md:flex-row h-auto items-center">
+        <div>
           <DataGrid
             rows={buildings}
             columns={Buildingcolumns}
             getRowId={(row: Building) => row.buildingId}
             className="bg-gray-100 shadow rounded-lg border border-gray-200 mt-5 !text-gray-700"
             onRowClick={handleEvent}
+            sx={{ overflow: "scroll" }}
           />
         </div>
-        <div className="hidden md:block" style={{ width: "50%" }}>
+
+        <div className="" style={{ width: "100%", height: "100%" }}>
           {buildings ? (
             <Mapy selected={selected} buildings={buildings}></Mapy>
           ) : (
