@@ -3,6 +3,7 @@
 import Header from "@/app/(components)/Header";
 import { Building, useGetDoorDetailQuery } from "@/state/api";
 import React from "react";
+import { Clipboard } from "flowbite-react";
 import { Cable, MapPin, Signal } from "lucide-react";
 import CustomChip from "@/app/(components)/CustomChip";
 import dayjs from "dayjs";
@@ -34,6 +35,9 @@ const DoorDetail = ({ params }: { params: Props }) => {
         <div className="grid w-auto">
           <div className="pb-1">{label}:</div>
           <div className="relative inline-block">
+            <label htmlFor="npm-install" className="sr-only">
+              Label
+            </label>
             <input
               id="clipboard"
               type="text"
@@ -42,19 +46,15 @@ const DoorDetail = ({ params }: { params: Props }) => {
               disabled
               readOnly
             />
+            {/* eslint-disable-next-line no-use-before-define */}
             <Clipboard.WithIcon
-              className="absolute inset-y-0 right-0 py-1 px-3 flex items-center pointer-events-non bg-gray-100"
+              className="absolute inset-y-1 right-0 py-1 px-3 flex items-center pointer-events-non bg-gray-100"
               valueToCopy={value || ""}
             />
           </div>
         </div>
       </div>
     );
-  };
-  const xxx = (item: Building) => {
-    const tempBuildingArray: Building[] = [];
-    tempBuildingArray.push(item);
-    return tempBuildingArray;
   };
 
   return (
