@@ -46,8 +46,26 @@ export const getDoorById = async (
     const result: Door | void = doorResults.find(
       (door: Door) => door.doorId == doorId
     );
+    if (!result) {
+      // const building = buildingList.find((building: Building) => {
+      //   return building.buildingId === result.buildingId;
+      // });
+      // const newResult = {
+      //   ...result,
+      //   corrdinates: building?.corrdinates,
+      // };
+      res.json([]);
+      return;
+    }
 
-    res.json(result);
+    const building = buildingList.find((building: Building) => {
+      return building.buildingId === result.buildingId;
+    });
+    const newResult = {
+      ...result,
+      corrdinates: building?.corrdinates,
+    };
+    res.json(newResult);
   } catch (error) {
     res.status(500).json({ message: "Error retrieving data" });
   }

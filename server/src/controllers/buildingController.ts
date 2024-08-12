@@ -6,7 +6,6 @@ import {
   doorList,
   buildingList,
 } from "../data";
-import { v4 as uuidv4 } from "uuid";
 import { doorResults } from "./doorController";
 
 export const getBuildings = async (

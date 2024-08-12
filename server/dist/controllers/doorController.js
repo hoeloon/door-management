@@ -32,7 +32,22 @@ const getDoorById = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
     try {
         const doorId = req.params.id;
         const result = exports.doorResults.find((door) => door.doorId == doorId);
-        res.json(result);
+        if (!result) {
+            // const building = buildingList.find((building: Building) => {
+            //   return building.buildingId === result.buildingId;
+            // });
+            // const newResult = {
+            //   ...result,
+            //   corrdinates: building?.corrdinates,
+            // };
+            res.json([]);
+            return;
+        }
+        const building = data_1.buildingList.find((building) => {
+            return building.buildingId === result.buildingId;
+        });
+        const newResult = Object.assign(Object.assign({}, result), { corrdinates: building === null || building === void 0 ? void 0 : building.corrdinates });
+        res.json(newResult);
     }
     catch (error) {
         res.status(500).json({ message: "Error retrieving data" });
