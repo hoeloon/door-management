@@ -36,7 +36,7 @@ const Dashboard = () => {
             </div>
           </div>
 
-          <div className="bg-gray-200 p-5 rounded-3xl text-center overflow-auto mt-5 w-fit md:w-full">
+          <div className="bg-gray-200 p-5 rounded-3xl text-center overflow-auto mt-5 w-100 md:w-full">
             <div className="font-semibold text-lg">
               Connection Status of Building
             </div>
